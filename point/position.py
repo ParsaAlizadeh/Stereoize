@@ -45,7 +45,7 @@ def playing():
     return thr.start()
 
 
-infile = ["../assets/wav/yeki.wav", "../assets/wav/shab.wav"]
+infile = ["../assets/wav/yeki.wav"]
 nfile = len(infile)
 data = np.empty(nfile, dtype=object)
 dur = 0
