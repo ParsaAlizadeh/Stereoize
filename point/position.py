@@ -45,7 +45,7 @@ def playing():
     return thr.start()
 
 
-infile = ["../assets/yeki.wav"]  # , "../assets/shab.wav", "../assets/hung.wav"]
+infile = ["../assets/wav/yeki.wav", "../assets/wav/shab.wav"]
 nfile = len(infile)
 data = np.empty(nfile, dtype=object)
 dur = 0
@@ -90,15 +90,6 @@ while running:
             key = e.key
             if key - 49 < nfile:
                 cur = key - 49
-            if 0 <= key - 273 < 4:
-                speed[0] += dx[key - 273]
-                speed[1] += dy[key - 273]
-                flag = key - 272
-
-        if e.type == KEYUP:
-            key = e.key
-            if 0 <= key - 273 < 4:
-                flag = 0
 
     if flag:
         speed[0] += dx[flag - 1]
@@ -116,7 +107,6 @@ while running:
         pygame.draw.circle(disp, col, (speaker[i] * zoom + W / 2).astype(int), 7)
 
     pygame.display.update()
-    clock.tick(60)
 
 sd.stop()
 pygame.quit()
