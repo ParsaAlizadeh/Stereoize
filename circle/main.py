@@ -1,8 +1,8 @@
 from scipy.io import wavfile
 import numpy as np
 
-infile = "../assets/hung.wav"
-outfile = "../out/dist.wav"
+infile = "../assets/wav/yeki.wav"
+outfile = "./yeki.wav"
 v = 343
 
 fs, src = wavfile.read(infile)

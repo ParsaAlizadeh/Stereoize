@@ -3,3 +3,4 @@
 venv/
 3daudio/*.wav
 3daudio/pos.txt
+circle/*.wav
