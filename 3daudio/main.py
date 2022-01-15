@@ -117,7 +117,7 @@ def getFont(sz):
 
 logpath = "./pos.txt"
 speakers, batch = load_files()
-fs = 48000
+fs = 44100
 FPS = 60
 
 v = 343
